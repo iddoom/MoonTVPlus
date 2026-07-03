@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server';
 
 import { isMusicSource, lxGetJson, LxServerSong, normalizeLxSong, unwrapLxArray } from '@/lib/music-v2';

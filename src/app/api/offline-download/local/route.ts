@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 /**
  * 本地下载视频播放代理 API
  */

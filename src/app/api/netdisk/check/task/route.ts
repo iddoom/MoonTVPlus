@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server';
 
 import { getNetdiskCheckCooldownRemainingMs, getNetdiskCheckTask } from '@/lib/netdisk-check-task';

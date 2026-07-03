@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 /**
  * 离线下载任务管理 API
  */

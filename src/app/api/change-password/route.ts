@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 /* eslint-disable no-console*/
 
 import { NextRequest, NextResponse } from 'next/server';

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server';
 
 import { fetchLxLyric, normalizeSong } from '@/lib/music-v2';

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server';
 
 import { getQrLoginSession, saveQrLoginSession } from '@/lib/qr-login/store';
