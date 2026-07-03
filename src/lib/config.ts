@@ -107,6 +107,7 @@ export function refineConfig(adminConfig: AdminConfig): AdminConfig {
         name: site.name,
         api: site.api,
         detail: site.detail,
+        proxyMode: true,
         from: 'config',
         disabled: false,
       });
@@ -352,6 +353,7 @@ async function getInitConfig(
       name: site.name,
       api: site.api,
       detail: site.detail,
+      proxyMode: true,
       from: 'config',
       disabled: false,
     });
