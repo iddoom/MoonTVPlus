@@ -6,14 +6,8 @@ import { AdminConfig } from './admin.types';
 
 const BUILTIN_DANMAKU_API_BASE = 'https://mtvpls-danmu.netlify.app/87654321';
 const DEFAULT_LIVE_REFRESH_INTERVAL_HOURS = 12;
-const DEFAULT_INIT_CONFIG = JSON.stringify({
-  api_site: {
-    jingjian: {
-      api: 'https://pz.v88.qzz.io?format=2&source=jingjian',
-      name: 'Jingjian',
-    },
-  },
-});
+const DEFAULT_CONFIG_SUBSCRIPTION_URL =
+  'https://pz.v88.qzz.io?format=2&source=jingjian';
 
 function normalizeLiveRefreshIntervalHours(
   refreshIntervalHours?: number
@@ -235,7 +229,8 @@ async function getInitConfig(
   let cfgFile: ConfigFileStruct;
 
   // 优先从环境变量读取订阅 URL
-  const envSubUrl = process.env.CONFIG_SUBSCRIPTION_URL || '';
+  const envSubUrl =
+    process.env.CONFIG_SUBSCRIPTION_URL || DEFAULT_CONFIG_SUBSCRIPTION_URL;
 
   if (envSubUrl) {
     try {
@@ -254,7 +249,7 @@ async function getInitConfig(
   }
 
   // 优先从环境变量读取配置
-  const envConfig = process.env.INIT_CONFIG || DEFAULT_INIT_CONFIG;
+  const envConfig = process.env.INIT_CONFIG || '';
   const configSource = envConfig || configFile;
 
   try {
